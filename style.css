@@ -1,0 +1,284 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #0f172a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a:hover {
+  color: #4ade80;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.home-text {
+  flex: 1;
+  text-align: left;
+}
+
+.home-text h1 span {
+  color: #4ade80;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4ade80;
+  color: #000;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #22c55e;
+}
+
+.home-img img {
+  max-width: 250px;
+  border-radius: 50%;
+  border: 4px solid #bbcfc22f;
+}
+
+/* About Section */
+.about {
+  background: #1e293b;
+  padding: 60px 10%;
+  border-radius: 12px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4ade80;
+}
+
+.about p {
+  margin: 15px 0;
+  font-size: 1rem;
+  color: #e2e8f0;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+
+/* Skills Section */
+.skills {
+  padding: 60px 10%;
+  background: #0f172a;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4ade80;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.skill-box {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-6px);
+}
+
+.skill-box h3 {
+  margin-bottom: 10px;
+  color: #4ade80;
+  font-size: 1.2rem;
+}
+
+.skill-box p {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.skills-summary {
+  text-align: center;
+  font-size: 1rem;
+  color: #d1d5db;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* Projects */
+.projects .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+}
+
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project h3 {
+  margin: 10px 0;
+  color: #4ade80;
+}
+
+.project p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact button {
+  background: #4ade80;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #22c55e;
+}
+
+/* Footer */
+footer {
+  background: #1e293b;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: #fff;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-text {
+    text-align: center;
+  }
+}
